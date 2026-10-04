@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STICKMAN: ONE CHANCE</title>
+    <meta
+      name="description"
+      content="STICKMAN: ONE CHANCE — a fast, brutal one-life platform challenge."
+    />
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <span class="brand-mark">STICKMAN</span>
+          <span class="brand-sub">ONE CHANCE</span>
+        </div>
+
+        <div class="topbar-actions">
+          <span class="life-pill">ONE LIFE</span>
+          <button id="restartButton" class="ghost-btn" type="button">Restart Run</button>
+        </div>
+      </header>
+
+      <main class="game-panel">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="Stickman game canvas"></canvas>
+
+        <div id="messageOverlay" class="overlay visible" aria-live="polite">
+          <div class="overlay-card">
+            <p class="eyebrow">One chance</p>
+            <h1 id="overlayTitle">Ready?</h1>
+            <p id="overlayText">Survive the gauntlet. One hit ends the run.</p>
+
+            <div class="player-entry">
+              <label for="playerNameInput">Player name</label>
+              <input id="playerNameInput" type="text" maxlength="16" placeholder="Enter your name" autocomplete="off" />
+            </div>
+
+            <button id="startButton" class="primary-btn" type="button">Start Run</button>
+          </div>
+        </div>
+      </main>
+
+      <footer class="hud" aria-live="polite">
+        <div class="hud-item">
+          <span>Level</span>
+          <strong id="levelLabel">1</strong>
+        </div>
+        <div class="hud-item">
+          <span>Best</span>
+          <strong id="bestLabel">—</strong>
+        </div>
+        <div class="hud-item player-tag">
+          <span>Player</span>
+          <strong id="playerNameBadge">Guest</strong>
+        </div>
+      </footer>
+
+      <aside class="scoreboard" aria-live="polite">
+        <div class="scoreboard-header">
+          <span>Scoreboard</span>
+        </div>
+        <ol id="scoreboardList" class="scoreboard-list"></ol>
+      </aside>
+
+      <div class="watermark" aria-label="Game owner details">
+        <span>owned by busayo</span>
+        <span class="watermark-email">busayovictor79@gmail.com</span>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>

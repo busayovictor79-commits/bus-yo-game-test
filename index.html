@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse Access</title>
+    <meta
+      name="description"
+      content="Modern login and signup page with secure access and elegant design."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="ambient ambient-one"></div>
+      <div class="ambient ambient-two"></div>
+
+      <main class="app-card" aria-live="polite">
+        <aside class="brand-panel">
+          <div class="brand-badge">Maison Élan</div>
+          <div class="brand-copy">
+            <p class="eyebrow">Private members club</p>
+            <h1>Elevated access for a more intentional life.</h1>
+            <p class="lead">
+              Curated workspace, private updates, and seamless collaboration designed for people who value clarity and refinement.
+            </p>
+          </div>
+
+          <div class="feature-list">
+            <div class="feature-item">
+              <span class="icon">✓</span>
+              <span>Discreet project management</span>
+            </div>
+            <div class="feature-item">
+              <span class="icon">✓</span>
+              <span>Secure, invitation-only access</span>
+            </div>
+            <div class="feature-item">
+              <span class="icon">✓</span>
+              <span>Elegant communication at every step</span>
+            </div>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-box">
+              <strong>24k+</strong>
+              <span>members</span>
+            </div>
+            <div class="stat-box">
+              <strong>99.9%</strong>
+              <span>uptime</span>
+            </div>
+            <div class="stat-box">
+              <strong>2.8x</strong>
+              <span>more focus</span>
+            </div>
+          </div>
+        </aside>
+
+        <section class="auth-panel">
+          <div id="authContent" class="auth-content">
+            <div class="form-header">
+              <div class="pill">Secure access</div>
+              <h2 id="formTitle">Sign in</h2>
+            </div>
+
+            <div class="social-row">
+              <button class="social-btn" type="button">Google</button>
+              <button class="social-btn" type="button">Apple</button>
+            </div>
+
+            <div class="divider"><span>or continue with email</span></div>
+
+            <form id="loginForm" class="auth-form active" novalidate>
+              <label>
+                <span>Email</span>
+                <input type="email" id="loginEmail" placeholder="you@example.com" required />
+              </label>
+
+              <label>
+                <span>Password</span>
+                <input type="password" id="loginPassword" placeholder="Enter your password" required />
+              </label>
+
+              <div class="form-meta">
+                <label class="checkbox-row">
+                  <input type="checkbox" checked />
+                  <span>Remember me</span>
+                </label>
+                <button type="button" class="inline-link">Forgot password?</button>
+              </div>
+
+              <button class="primary-btn" type="submit">Sign in</button>
+
+              <p class="switch-copy">
+                Need an account?
+                <button type="button" class="text-link" data-mode="signup">Create one</button>
+              </p>
+            </form>
+
+            <form id="signupForm" class="auth-form" novalidate>
+              <label>
+                <span>Full name</span>
+                <input type="text" id="signupName" placeholder="Alex Morgan" required />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input type="email" id="signupEmail" placeholder="you@example.com" required />
+              </label>
+
+              <label>
+                <span>Password</span>
+                <input type="password" id="signupPassword" placeholder="Create a password" required />
+              </label>
+
+              <label>
+                <span>Confirm password</span>
+                <input type="password" id="signupConfirm" placeholder="Confirm your password" required />
+              </label>
+
+              <div class="password-tip">Use at least 8 characters with a mix of letters and numbers.</div>
+
+              <button class="primary-btn" type="submit">Create account</button>
+
+              <p class="switch-copy">
+                Already have an account?
+                <button type="button" class="text-link" data-mode="login">Sign in</button>
+              </p>
+            </form>
+          </div>
+
+          <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+
+          <div id="dashboard" class="dashboard hidden" aria-live="polite">
+            <div class="dashboard-card">
+              <div class="avatar">P</div>
+              <p>Welcome back</p>
+              <h3 id="welcomeName">Guest</h3>
+              <div class="dashboard-meta">
+                <span>Secure session active</span>
+                <span id="lastLoginLabel">Ready to work</span>
+              </div>
+              <button id="logoutBtn" class="primary-btn secondary" type="button">Log out</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div style="text-align:center; margin-top: 18px;">
+      <a href="game.html" style="display:inline-block; text-decoration:none; color:#111; background:#fff; border:1px solid rgba(17,17,17,0.12); padding:10px 16px; border-radius:12px; font-weight:700;">Play STICKMAN: ONE CHANCE</a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
